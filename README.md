@@ -52,13 +52,12 @@ has_one : buyer_information
 | prefectures_id   | integer    | null: false, foreign_key: true |
 | city             | string     | null: false                    |
 | address          | string     | null: false                    |
-| building_name    | string     | null: false                    |
+| building_name    | string     |                                |
 | phone_number     | string     | null: false                    |
 | buy              | references | null: false, foreign_key: true |
 
 ## Association
-belongs_to : buys
-belongs_to : prefectures
+belongs_to : buy
 
 
 ## ActiveHash //モデルのみ制作
