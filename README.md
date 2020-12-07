@@ -1,8 +1,8 @@
 ## usersテーブル
 | colum               | type    | option   |
 | ------------------- | ------- | -------- |
-| email               | string | null: false |
-| password            | string | null: false |
+| encrypted_email     | string | null: false |
+| encrypted_password  | string | null: false |
 | nick_name           | string | null: false |
 | last_name           | string | null: false |
 | first_name          | string | null: false |
@@ -30,7 +30,6 @@ has_many : buys
 
 ## Association
 belongs_to : user
-belongs_to: product_options
 has_one : buy
 
 
