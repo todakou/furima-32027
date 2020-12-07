@@ -1,7 +1,7 @@
 ## usersテーブル
-| colum               | type    | option   |
-| ------------------- | ------- | -------- |
-| encrypted_email     | string | null: false |
+| colum               | type   | option      |
+| ------------------- | ------ | ----------- |
+| email               | string | null: false |
 | encrypted_password  | string | null: false |
 | nick_name           | string | null: false |
 | last_name           | string | null: false |
