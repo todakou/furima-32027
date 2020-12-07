@@ -12,7 +12,7 @@
 
 ## Association
 has_many : products
-has_one : buys
+has_many : buys
 
 
 ## productsテーブル
@@ -39,7 +39,6 @@ has_one : buy
 | ----------------- | ---------- | ------------------------------ |
 | product           | references | null: false, foreign_key: true |
 | user              | references | null: false, foreign_key: true |
-| buyer_information | references | null: false, foreign_key: true |
 
 ## Association
 belongs_to : product
