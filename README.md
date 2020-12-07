@@ -16,17 +16,17 @@ has_many : buys
 
 
 ## productsテーブル
-| colum            | type       | option      |
-| ---------------- | ---------- | ----------- |
-| name             | string     | null: false |
-| text             | text       | null: false |
-| price            | integer    | null: false |
-| user             | references | null: false |
-| charges_id       | integer    | null: false |
-| prefectures_id   | integer    | null: false |
-| days_id          | integer    | null: false |
-| category_id      | integer    | null: false |
-| status_id        | integer    | null: false |
+| colum         | type       | option      |
+| ------------- | ---------- | ----------- |
+| name          | string     | null: false |
+| text          | text       | null: false |
+| price         | integer    | null: false |
+| user          | references | null: false |
+| charge_id     | integer    | null: false |
+| prefecture_id | integer    | null: false |
+| day_id        | integer    | null: false |
+| category_id   | integer    | null: false |
+| status_id     | integer    | null: false |
 
 ## Association
 belongs_to : user
@@ -46,25 +46,25 @@ has_one : buyer_information
 
 
 ## buyer_informationテーブル
-| colum            | type       | option                         |
-| ---------------- | ---------- | ------------------------------ |
-| postal_code      | string     | null: false                    |
-| prefectures_id   | integer    | null: false                    |
-| city             | string     | null: false                    |
-| address          | string     | null: false                    |
-| building_name    | string     |                                |
-| phone_number     | string     | null: false                    |
-| buy              | references | null: false, foreign_key: true |
+| colum         | type       | option                         |
+| ------------- | ---------- | ------------------------------ |
+| postal_code   | string     | null: false                    |
+| prefecture_id | integer    | null: false                    |
+| city          | string     | null: false                    |
+| address       | string     | null: false                    |
+| building_name | string     |                                |
+| phone_number  | string     | null: false                    |
+| buy           | references | null: false, foreign_key: true |
 
 ## Association
 belongs_to : buy
 
 
 ## ActiveHash //モデルのみ制作
-| model_name  | Association                                     |
-| ----------- | ----------------------------------------------- |
-| charges     |has_many: products                               |
-| prefectures |has_many: products, belongs_to:buyer_information |
-| days        |has_many: products                               |
-| category    |has_many: products                               |
-| status      |has_many: products                               |
+| model_name | Association                                     |
+| ---------- | ----------------------------------------------- |
+| charge     |has_many: products                               |
+| prefecture |has_many: products, belongs_to:buyer_information |
+| day        |has_many: products                               |
+| category   |has_many: products                               |
+| status     |has_many: products                               |
